@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.lxq.platform.userManage.pojo.Group" table="basic_group" catalog="pamsdb">
+        <id name="uid" type="java.lang.Integer">
+            <generator class="native" />
+        </id>
+		
+        <property name="groupId" type="java.lang.String" length="20"/>
+        <property name="groupName" type="java.lang.String" length="50"/>
+        
+        <set name="users" table="basic_group_user">
+			<key column="c_group"/>
+			<many-to-many class="com.lxq.platform.userManage.pojo.User" column="user"/>
+		</set>
+        
+        <set name="roles" table="basic_group_role">
+			<key column="c_group"/>
+			<many-to-many class="com.lxq.platform.userManage.pojo.Role" column="role"/>
+		</set>
+        
+        <many-to-one name="status" lazy="false"/>
+    </class>
+</hibernate-mapping>

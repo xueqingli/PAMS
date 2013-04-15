@@ -1,0 +1,14 @@
+admin-系统管理员    2013-03-17 18:31:04.475    0:0:0:0:0:0:0:1    add    com.lxq.platform.systemManage.pojo.CodeCatalog    json:{"codeNo":"GoalCatalog","codeName":"目标类型"}
+admin-系统管理员    2013-03-17 18:31:18.755    0:0:0:0:0:0:0:1    add    com.lxq.platform.systemManage.pojo.CodeLibrary    json:{"value":"1","text":"个人年度目标","codeCatalog":{"uid":"3"}}
+admin-系统管理员    2013-03-17 18:31:28.937    0:0:0:0:0:0:0:1    add    com.lxq.platform.systemManage.pojo.CodeLibrary    json:{"value":"2","text":"个人月度目标","codeCatalog":{"uid":"3"}}
+admin-系统管理员    2013-03-17 18:31:39.777    0:0:0:0:0:0:0:1    add    com.lxq.platform.systemManage.pojo.CodeLibrary    json:{"value":"3","text":"组织年度目标","codeCatalog":{"uid":"3"}}
+admin-系统管理员    2013-03-17 21:47:35.739    0:0:0:0:0:0:0:1    add    com.lxq.platform.userManage.pojo.Privilege    json:{"name":"增加共性目标权限","operate":"add","className":"com.lxq.platform.userManage.pojo"}
+admin-系统管理员    2013-03-17 21:47:50.436    0:0:0:0:0:0:0:1    add    com.lxq.platform.userManage.pojo.Privilege    json:{"name":"删除共性目标权限","operate":"delete","className":"com.lxq.platform.userManage.pojo"}
+admin-系统管理员    2013-03-17 21:48:06.789    0:0:0:0:0:0:0:1    add    com.lxq.platform.userManage.pojo.Privilege    json:{"name":"更新共性目标权限","operate":"update","className":"com.lxq.platform.userManage.pojo"}
+admin-系统管理员    2013-03-17 21:48:22.072    0:0:0:0:0:0:0:1    add    com.lxq.platform.userManage.pojo.Privilege    json:{"name":"查询共性目标权限","operate":"query","className":"com.lxq.platform.userManage.pojo"}
+admin-系统管理员    2013-03-17 21:48:33.624    0:0:0:0:0:0:0:1    add    com.lxq.platform.userManage.pojo.Privilege    json:{"name":"所有共性目标权限","operate":"all","className":"com.lxq.platform.userManage.pojo"}
+admin-系统管理员    2013-03-17 21:49:20.412    0:0:0:0:0:0:0:1    add    com.lxq.platform.userManage.pojo.Role    json:{"roleUid":"1","privilegeUid":61}
+admin-系统管理员    2013-03-17 22:13:22.881    0:0:0:0:0:0:0:1    update    com.lxq.platform.userManage.pojo.Privilege    json:{->57,->增加共性目标权限,->add,->com.lxq.platform.userManage.pojo.CorporateGoal,}
+admin-系统管理员    2013-03-17 22:14:11.951    0:0:0:0:0:0:0:1    update    com.lxq.platform.userManage.pojo.CorporateGoal    json:{->1,catalog.uid:6->6,->1,->1111,->1111,->1111,}
+admin-系统管理员    2013-03-17 23:04:04.101    0:0:0:0:0:0:0:1    add    com.lxq.platform.systemManage.pojo.Notice    json:{"title":"jfkdkjk","filePath":"","startDate":"2013-03-19","endDate":"2013-03-27"}
+admin-系统管理员    2013-03-17 23:07:47.512    0:0:0:0:0:0:0:1    update    com.lxq.platform.systemManage.pojo.Notice    json:{->5,->系统上线通知,->/WEB-INF/data/notice/证明与计算.wps,->2013-03-17,->2013-03-31,}

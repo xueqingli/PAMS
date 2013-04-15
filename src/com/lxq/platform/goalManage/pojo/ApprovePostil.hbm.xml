@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.lxq.platform.goalManage.pojo.ApprovePostil" table="approve_postil" dynamic-update="true" catalog="pamsdb">
+        <id name="uid" type="java.lang.Integer">
+            <generator class="native" />
+        </id>
+        
+        <property name="phaseNo" type="java.lang.Integer"/>
+        <many-to-one name="goal"></many-to-one>
+        <property name="postil" type="java.lang.String" length="500"/>
+        <many-to-one name="applyType"></many-to-one>
+        <many-to-one name="action"></many-to-one>
+        <property name="score" type="java.lang.Integer"/>
+        <many-to-one name="approveDept"></many-to-one>
+        <many-to-one name="approvePerson"></many-to-one>
+        <property name="approveTime" type="java.lang.String"/>
+    </class>
+</hibernate-mapping>

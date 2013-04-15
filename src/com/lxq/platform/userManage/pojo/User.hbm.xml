@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.lxq.platform.userManage.pojo.User" table="basic_user" catalog="pamsdb">
+        <id name="uid" type="java.lang.Integer">
+            <generator class="native" />
+        </id>
+        <property name="userId" type="java.lang.String" length="20"/>
+        <property name="userName" type="java.lang.String" length="50"/>
+        <property name="password" type="java.lang.String" length="50"/>
+        
+        <many-to-one name="belongDept" column="belongDept" lazy="false"/>
+        
+        <set name="groups" table="basic_group_user" lazy="false">
+			<key column="user"/>
+			<many-to-many class="com.lxq.platform.userManage.pojo.Group" column="c_group"/>
+		</set>
+        
+        <set name="roles" table="basic_user_role" lazy="false">
+			<key column="user"/>
+			<many-to-many class="com.lxq.platform.userManage.pojo.Role" column="role"/>
+		</set>
+        
+        <many-to-one name="status" lazy="false"/>
+        
+        <property name="loginNum" type="java.lang.Integer"/>
+    	    
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+admin-系统管理员    2013-03-22 11:20:27.524    0:0:0:0:0:0:0:1    login
+Can't transform property 'batchType' from java.lang.Integer into com.lxq.platform.systemManage.pojo.CodeLibrary. Will register a default Morpher
+Property 'com.lxq.platform.systemManage.pojo.CodeLibrary.class' has no write method. SKIPPED.
+Property 'java.lang.Integer.codeCatalog' does not exist. SKIPPED.
+Property 'java.lang.Integer.text' does not exist. SKIPPED.
+Property 'java.lang.Integer.uid' does not exist. SKIPPED.
+Property 'java.lang.Integer.value' does not exist. SKIPPED.
+admin-系统管理员    2013-03-22 14:40:55.067    0:0:0:0:0:0:0:1    login
+admin-系统管理员    2013-03-22 15:01:58.469    0:0:0:0:0:0:0:1    logout
+admin-系统管理员    2013-03-22 20:46:54.972    0:0:0:0:0:0:0:1    login
+admin-系统管理员    2013-03-22 20:52:23.011    0:0:0:0:0:0:0:1    logout
+admin-系统管理员    2013-03-22 20:52:25.665    0:0:0:0:0:0:0:1    login
+admin-系统管理员    2013-03-22 20:53:12.139    0:0:0:0:0:0:0:1    logout
+admin-系统管理员    2013-03-22 20:53:14.481    0:0:0:0:0:0:0:1    login
+admin-系统管理员    2013-03-22 21:29:17.841    0:0:0:0:0:0:0:1    logout

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lxq.platform.systemManage.pojo.CodeCatalog" table="basic_code_catalog" catalog="pamsdb">
+        <id name="uid" type="java.lang.Integer">
+            <generator class="native"/>
+        </id>
+        <property name="codeNo" type="java.lang.String" length="20"/>
+        <property name="codeName" type="java.lang.String" length="50"/>
+        <set name="codeLibrarys" lazy="false" order-by="uid" inverse="true" cascade="all">
+			<key column="codeCatalog"/>
+			<one-to-many class="com.lxq.platform.systemManage.pojo.CodeLibrary"/>
+		</set>
+        
+    </class>
+</hibernate-mapping>
+

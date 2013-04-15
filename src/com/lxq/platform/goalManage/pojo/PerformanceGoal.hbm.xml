@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.lxq.platform.goalManage.pojo.PerformanceGoal" table="performance_goal" dynamic-update="true" catalog="pamsdb">
+        <id name="uid" type="java.lang.Integer">
+            <generator class="native" />
+        </id>
+        
+        <many-to-one name="dateBatch"></many-to-one>
+        <property name="content" type="java.lang.String" length="500"/>
+        <many-to-one name="finishStatus"></many-to-one>
+        <many-to-one name="goalType"></many-to-one>
+        <property name="fullScore" type="java.lang.Integer"/>
+        <many-to-one name="ownerDept"></many-to-one>
+        <many-to-one name="ownerPerson"></many-to-one>
+        <property name="coorDeptsJson" type="java.lang.String"/>
+        <many-to-one name="createDept"></many-to-one>
+        <many-to-one name="createPerson"></many-to-one>
+        <property name="createTime" type="java.lang.String"/>
+        <many-to-one name="finalApprover"></many-to-one>
+        <property name="finalScore" type="java.lang.Integer"/>
+        <many-to-one name="beginStatus"></many-to-one>
+        <many-to-one name="endStatus"></many-to-one>
+        
+    </class>
+</hibernate-mapping>

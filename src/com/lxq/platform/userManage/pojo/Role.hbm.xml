@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.lxq.platform.userManage.pojo.Role" table="basic_role" catalog="pamsdb">
+        <id name="uid" type="java.lang.Integer">
+            <generator class="native" />
+        </id>
+        <property name="roleId" type="java.lang.String" length="20"/>
+        <property name="roleName" type="java.lang.String" length="50"/>
+
+        <set name="privileges" table="basic_role_privilege" lazy="false">
+			<key column="role"/>
+			<many-to-many class="com.lxq.platform.userManage.pojo.Privilege" column="privilege"/>
+		</set>
+			
+        <many-to-one name="status" lazy="false"/>
+
+    </class>
+</hibernate-mapping>

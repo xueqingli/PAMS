@@ -1,0 +1,76 @@
+/*!
+ * 修改 Ext3.4 CSS 字体样式
+ */
+.x-window-footer {  
+    position: relative;  
+    top: 0;  
+    right: 0;  
+}  
+.x-tab-strip SPAN.x-tab-strip-text  {  
+    font-size: 14px;  
+}  
+.x-panel-header {  
+    font-size: 14px;  
+}  
+.x-tree-node {  
+    font-size: 14px;  
+}  
+.x-grid3-hd-row TD {  
+    font-size: 14px;  
+}  
+.x-grid3-row TD {  
+    font-size: 14px;  
+    LINE-HEIGHT: 18px;  
+}  
+.x-tip .x-tip-bd {  
+    font-size: 14px;  
+}  
+.x-tip h3{  
+    font-size: 14px;  
+}  
+.x-tip .x-tip-bd-inner{  
+    font-size:14px;  
+}  
+.x-panel-tl .x-panel-header {  
+    FONT: normal 14px tahoma,arial,verdana,sans-serif;  
+}  
+.x-form-field {  
+    FONT: 14px tahoma,arial,helvetica,sans-serif      
+}  
+.x-small-editor .x-form-field {  
+    FONT: 14px tahoma,arial,helvetica,sans-serif      
+}  
+.x-combo-list-item {  
+    FONT: 14px tahoma,arial,helvetica,sans-serif;     
+}     
+.x-menu-list-item {  
+    FONT: 14px tahoma,arial,sans-serif;  
+}  
+.x-window-tl .x-window-header {  
+    FONT: bold 14px tahoma,arial,verdana,sans-serif;      
+}  
+.x-layout-split-west .x-layout-mini {     
+    BACKGROUND-IMAGE: url(../images/mini-left.jpg);   
+}  
+.ext-ie .x-form-text {  
+    margin-top:1px;  
+} /* the textField missing bottom line */  
+.x-form-item {    
+    FONT: 14px tahoma,arial,helvetica,sans-serif  
+}  
+.x-grid-group-hd DIV {    
+    FONT: bold 14px tahoma,arial,helvetica,sans-serif;  
+}  
+  
+/*设置工具栏按钮字体大小*/  
+.x-btn button{
+    font:normal 14px arial,tahoma,verdana,helvetica;
+    color:#333;
+}
+.x-toolbar div.xtb-text{
+	font-size:14px;
+}
+
+.x-tree-node-leaf .x-tree-node-icon {
+	background-image: url(../images/text.png);
+}

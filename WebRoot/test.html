@@ -1,0 +1,103 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Advanced Ext.ux.StatusBar Example</title>
+
+<link rel="stylesheet" type="text/css"
+	href="./resources/extjs/resources/css/ext-all.css" />
+<link rel="stylesheet" type="text/css"
+	href="./resources/extjs/examples/shared/examples.css" />
+<link rel="stylesheet" type="text/css"
+	href="./resources/css/ext-patch.css" />
+
+<script type="text/javascript"
+	src="./resources/extjs/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="./resources/extjs/states.js"></script>
+<script type="text/javascript" src="./resources/extjs/ext-all-debug.js"></script>
+<script type="text/javascript"
+	src="./resources/extjs/examples/shared/examples.js"></script>
+<script type="text/javascript"
+	src="./resources/extjs/src/locale/ext-lang-zh_CN.js"></script>
+
+<script type="text/javascript"
+	src="./resources/extjs/Ext.ux.form.LovCombo.js"></script>
+
+<style>
+
+.ux-lovcombo-icon {
+	width: 16px;
+	height: 16px;
+	float: left;
+	background-position: -1px -1px ! important;
+	background-repeat: no-repeat ! important;
+}
+
+.ux-lovcombo-icon-checked {
+	background: transparent url(./resources/images/checked.gif);
+}
+
+.ux-lovcombo-icon-unchecked {
+	background: transparent url(./resources/images/unchecked.gif);
+}
+</style>
+
+<script type="text/javascript"> 
+    /*!
+ * Ext JS Library 3.4.0
+ * Copyright(c) 2006-2011 Sencha Inc.
+ * licensing@sencha.com
+ * http://www.sencha.com/license
+ */
+ Ext.BLANK_IMAGE_URL = './resources/extjs/resources/images/default/tree/s.gif';
+Ext.QuickTips.init();
+
+Ext.onReady(function(){
+
+var lvComboStore = new Ext.data.SimpleStore({
+			 id:0,
+			 fields:['id', 'name'],
+			 data:[
+				 [1, 'Personnel']
+				,[11, 'Finance']
+				,[2, 'Management']
+				,[22, 'Production']
+				,[3, 'Users']
+			]
+		})
+
+
+    	var passwdPanel = new Ext.FormPanel({
+    	id:'passwdPanel',
+      frame: true,
+      bodyStyle:'padding:5px 5px 0',
+      items: [{  
+		  xtype : 'lovcombo',  
+		  name : 'roles',  
+		  fieldLabel : 'Roles',  
+		  store : lvComboStore,  
+		  valueField : 'id',  
+		  displayField : 'name',  
+		  mode : 'local',  
+		  editable : true,  
+		  triggerAction : 'all'  
+		 }  ]
+    });
+	/**创建新增表单窗口**/
+	var passwdWindow = new Ext.Window({
+		modal: true,
+		title: '修改密码',
+		width: 400,
+		height: 200,
+		autoScroll:true,
+		closeAction: 'hide',
+		items: [passwdPanel]
+	}).show();
+
+});
+    
+    </script>
+</head>
+<body>
+
+</body>
+</html>

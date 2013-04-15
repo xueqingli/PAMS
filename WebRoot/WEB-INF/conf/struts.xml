@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+ 	
+    <!-- 设置最大上传文件是30M -->  
+    <constant name="struts.multipart.maxSize" value="31457280" />  
+    <!-- 设置默认的临时文件存储位置 -->  
+    <constant name="struts.multipart.saveDir" value="/tmp" /> 
+
+	<constant name="struts.devMode" value="true" />
+	
+	<package name="project_default" extends="json-default">
+		<interceptors> 
+			<!--定义异常处理的拦截器--> 
+			<interceptor name="logInterceptor" class="com.lxq.platform.interceptor.LogInterceptor"/> 
+			<interceptor-stack name="logException"> 
+				<!--配置内建默认拦截器--> 
+				<interceptor-ref name="defaultStack"/> 
+				<interceptor-ref name="logInterceptor"/> 
+			</interceptor-stack> 
+		</interceptors> 
+		
+		<default-interceptor-ref name="logException"/>
+	
+		<global-results>
+    		<result name="Exception">/exceptionHandler?exceptionMessage=系统错误</result>
+    		<result name="SQLException">/exceptionHandler?exceptionMessage=sql语法错误</result>
+    		<result name="PrivilegeException">/exceptionHandler?exceptionMessage=没有此操作权限</result>
+    	</global-results>
+    	
+		 <global-exception-mappings>
+    		<exception-mapping result="Exception" exception="java.lang.Exception"></exception-mapping>
+    		<exception-mapping result="SQLException" exception="java.sql.SQLException"></exception-mapping>
+    		<exception-mapping result="PrivilegeException" exception="com.lxq.platform.exception.PrivilegeException"></exception-mapping>
+    	</global-exception-mappings>
+    	
+	</package>
+	    
+	       
+    <package name="login" namespace="/" extends="project_default" >
+       <action name="login" class="com.lxq.platform.userManage.action.LoginAction">
+       		<result type="json"/> 
+       </action>
+       <action name="refreshUserCache" class="com.lxq.platform.userManage.action.LoginAction">
+       		<result type="json"/> 
+       </action>
+       <action name="logout" class="com.lxq.platform.userManage.action.LoginAction">
+       		<result name="success">/index.jsp</result>
+       </action>
+       <action name="onlineUser" class="com.lxq.platform.userManage.action.OnlineUserAction">
+       </action>
+    </package>
+
+    <package name="base" namespace="/" extends="project_default" >
+       <action name="baseAction" class="com.lxq.platform.action.BaseAction">
+       </action>
+    </package>
+
+    <package name="util" namespace="/" extends="project_default" >
+       <action name="utilAction" class="com.lxq.platform.action.UtilAction">
+       </action>
+       <action name="testAction" class="com.lxq.platform.action.TestAction" method="test">
+       </action>
+    </package>
+	
+    <package name="userManage" namespace="/userManage" extends="project_default" >
+       <action name="departmentAction" class="com.lxq.platform.userManage.action.DepartmentAction">
+       </action>
+       <action name="userAction" class="com.lxq.platform.userManage.action.UserAction">
+       </action>
+       <action name="groupRoleAction" class="com.lxq.platform.userManage.action.GroupRoleAction">
+       </action>
+       <action name="groupUserAction" class="com.lxq.platform.userManage.action.GroupUserAction">
+       </action>
+       <action name="userRoleAction" class="com.lxq.platform.userManage.action.UserRoleAction">
+       </action>
+       <action name="rolePrivilegeAction" class="com.lxq.platform.userManage.action.RolePrivilegeAction">
+       </action>
+    </package>
+	
+    <package name="systemManage" namespace="/systemManage" extends="project_default" >
+       <action name="menuRoleAction" class="com.lxq.platform.systemManage.action.MenuRoleAction">
+       </action>
+       <action name="noticeAction" class="com.lxq.platform.systemManage.action.NoticeAction">
+       </action>
+    </package>
+	
+    <package name="goalManage" namespace="/goalManage" extends="project_default" >
+       <action name="goalApplyAction" class="com.lxq.platform.goalManage.action.GoalApplyAction">
+       </action>
+       <action name="goalApproveAction" class="com.lxq.platform.goalManage.action.GoalApproveAction">
+       </action>
+       <action name="goalApplierAction" class="com.lxq.platform.goalManage.action.GoalApplierAction">
+       </action>
+       <action name="goalSendAction" class="com.lxq.platform.goalManage.action.GoalSendAction">
+       </action>
+       <action name="goalQuery" class="com.lxq.platform.goalManage.action.GoalQuery">
+       </action>
+    </package>
+    
+</struts>

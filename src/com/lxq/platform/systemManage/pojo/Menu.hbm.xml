@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lxq.platform.systemManage.pojo.Menu" table="basic_menu" catalog="pamsdb">
+
+        <id name="uid" type="java.lang.Integer">
+            <generator class="native" />
+        </id>
+        <property name="orderNo" type="java.lang.Integer"/>
+        <property name="text" type="java.lang.String" length="20"/>
+        <property name="url" type="java.lang.String" length="200"/>
+        <property name="showTree" type="java.lang.Boolean"/>
+        
+        <many-to-one name="parentMenu" lazy="false" />
+        
+		<set name="childMenus" order-by="orderNo asc" inverse="true" cascade="all">
+            <key column="parentMenu"/>  
+			<one-to-many class="com.lxq.platform.systemManage.pojo.Menu"/>
+        </set>
+        
+		<set name="roles" table="basic_menu_role" lazy="false">
+			<key column="menu"/>
+			<many-to-many class="com.lxq.platform.userManage.pojo.Role" column="role"/>
+		</set>
+        <property name="valid" type="java.lang.Boolean"/>
+        
+    </class>
+</hibernate-mapping>
+

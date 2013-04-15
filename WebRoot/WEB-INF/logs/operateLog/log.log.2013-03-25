@@ -1,0 +1,2 @@
+admin-系统管理员    2013-03-25 16:53:54.412    0:0:0:0:0:0:0:1    update    com.lxq.platform.goalManage.pojo.DateBatch    json:{->2,batchType.uid:11->12,->2013-04,->true,->false,}
+admin-系统管理员    2013-03-25 16:54:01.481    0:0:0:0:0:0:0:1    update    com.lxq.platform.goalManage.pojo.DateBatch    json:{->1,batchType.uid:11->12,->2013-03,->false,->true,}

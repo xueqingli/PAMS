@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lxq.platform.userManage.pojo.Department" table="basic_department" catalog="pamsdb">
+        <id name="uid" type="java.lang.Integer">
+            <generator class="native" />
+        </id>
+        
+        <property name="deptId" type="java.lang.String" length="20"/>
+       
+        <many-to-one name="parentDept"/>
+		
+		<set name="childDepts" order-by="deptId asc" inverse="true" cascade="all">
+            <key column="parentDept"/>  
+			<one-to-many class="com.lxq.platform.userManage.pojo.Department"/>
+        </set>
+        		
+        <many-to-one name="level" lazy="false"/>
+		
+        <property name="deptName" type="java.lang.String" length="50"/>
+        
+        <many-to-one name="directLeader"/>
+        
+        <set name="users" inverse="true" cascade="all">
+			<key column="belongDept"/>
+			<one-to-many class="com.lxq.platform.userManage.pojo.User"/>
+		</set>
+		
+        <many-to-one name="status"/>
+        
+    </class>
+</hibernate-mapping>

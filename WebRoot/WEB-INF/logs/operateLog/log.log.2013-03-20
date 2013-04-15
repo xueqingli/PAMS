@@ -1,0 +1,10 @@
+admin-系统管理员    2013-03-20 22:22:04.092    0:0:0:0:0:0:0:1    update    com.lxq.platform.userManage.pojo.Department    json:{->2,->2,->科技部,parentDept.uid:1->1,status.uid:5->5,}
+admin-系统管理员    2013-03-20 22:23:00.805    0:0:0:0:0:0:0:1    update    com.lxq.platform.userManage.pojo.Department    json:{->2,->2,->科技部,parentDept.uid:1->1,status.uid:5->6,}
+admin-系统管理员    2013-03-20 22:23:08.856    0:0:0:0:0:0:0:1    update    com.lxq.platform.userManage.pojo.Department    json:{->2,->2,->科技部,parentDept.uid:1->1,status.uid:6->5,}
+admin-系统管理员    2013-03-20 22:23:47.065    0:0:0:0:0:0:0:1    add    com.lxq.platform.userManage.pojo.Department    json:{"deptId":"111","deptName":"qwqw","parentDept":{"uid":"1"},"status":{"uid":5}}
+admin-系统管理员    2013-03-20 22:23:52.666    0:0:0:0:0:0:0:1    delete    com.lxq.platform.userManage.pojo.Department    json:{"uid":"8"}
+admin-系统管理员    2013-03-20 23:57:54.994    0:0:0:0:0:0:0:1    update    com.lxq.platform.userManage.pojo.Department    json:{->2,->2,->科技部111,parentDept.uid:1->1,status.uid:5->5,}
+admin-系统管理员    2013-03-20 23:58:02.124    0:0:0:0:0:0:0:1    update    com.lxq.platform.userManage.pojo.Department    json:{->2,->2,->科技部,parentDept.uid:1->1,status.uid:5->5,}
+admin-系统管理员    2013-03-20 23:59:20.403    0:0:0:0:0:0:0:1    update    com.lxq.platform.userManage.pojo.User    json:{->3,->ghost,->临时用户,belongDept.uid:1->1,status.uid:1->5,}
+admin-系统管理员    2013-03-20 23:59:29.095    0:0:0:0:0:0:0:1    update    com.lxq.platform.userManage.pojo.User    json:{->4,->test,->测试用户,belongDept.uid:1->1,status.uid:1->5,}
+admin-系统管理员    2013-03-20 23:59:36.960    0:0:0:0:0:0:0:1    update    com.lxq.platform.userManage.pojo.User    json:{->1,->admin,->系统管理员,belongDept.uid:1->1,status.uid:1->5,}

@@ -1,0 +1,13 @@
+admin-系统管理员    2013-03-14 10:17:56.287    0:0:0:0:0:0:0:1    add    com.lxq.platform.systemManage.pojo.Notice    json:{"endDate":"2013-03-13","filePath":"/WEB-INF/data/notice/证明与计算.wps","startDate":"2013-03-13","title":"系统上线通知","uid":5}
+admin-系统管理员    2013-03-14 10:25:50.000    0:0:0:0:0:0:0:1    update    com.lxq.platform.systemManage.pojo.Notice    json:{->5,->系统上线通知,->/WEB-INF/data/notice/证明与计算.wps,->2013-03-14,->2013-03-14,}
+admin-系统管理员    2013-03-14 10:25:59.347    0:0:0:0:0:0:0:1    update    com.lxq.platform.systemManage.pojo.Notice    json:{->5,->系统上线通知,->/WEB-INF/data/notice/证明与计算.wps,->2013-03-14,->2013-03-14,}
+admin-系统管理员    2013-03-14 10:26:06.867    0:0:0:0:0:0:0:1    update    com.lxq.platform.systemManage.pojo.Notice    json:{->5,->系统上线通知,->/WEB-INF/data/notice/证明与计算.wps,->2013-03-14,->2013-03-14,}
+admin-系统管理员    2013-03-14 10:26:49.005    0:0:0:0:0:0:0:1    update    com.lxq.platform.systemManage.pojo.Notice    json:{->5,->系统上线通知,->/WEB-INF/data/notice/证明与计算.wps,->2013-03-14,->2013-03-14,}
+admin-系统管理员    2013-03-14 10:27:00.348    0:0:0:0:0:0:0:1    update    com.lxq.platform.systemManage.pojo.Notice    json:{->5,->系统上线通知,->/WEB-INF/data/notice/证明与计算.wps,->2013-03-14,->2013-03-14,}
+admin-系统管理员    2013-03-14 10:27:41.941    0:0:0:0:0:0:0:1    update    com.lxq.platform.systemManage.pojo.Notice    json:{->5,->系统上线通知,->/WEB-INF/data/notice/证明与计算.wps,->2013-03-14,->2013-03-14,}
+admin-系统管理员    2013-03-14 10:29:24.141    0:0:0:0:0:0:0:1    update    com.lxq.platform.systemManage.pojo.Notice    json:{->5,->系统上线通知,->/WEB-INF/data/notice/证明与计算.wps,->2013-03-14,->2013-03-31,}
+admin-系统管理员    2013-03-14 16:50:43.176    0:0:0:0:0:0:0:1    add    com.lxq.platform.flowManage.pojo.FlowModel    json:{"phaseNo":"1020","phaseName":"阶段3","role":{"uid":1},"nextPhaseNo":"1040","flowCatalog":{"uid":"1"}}
+admin-系统管理员    2013-03-14 17:14:55.113    0:0:0:0:0:0:0:1    update    com.lxq.platform.flowManage.pojo.FlowModel    json:{->6,->1020,->阶段3,role.uid:1->1,->4444,flowCatalog.uid:1->1,}
+admin-系统管理员    2013-03-14 17:15:04.011    0:0:0:0:0:0:0:1    update    com.lxq.platform.flowManage.pojo.FlowModel    json:{->6,->1020,->阶段3,role.uid:1->1,->6666,flowCatalog.uid:1->1,}
+admin-系统管理员    2013-03-14 17:17:16.205    0:0:0:0:0:0:0:1    delete    com.lxq.platform.flowManage.pojo.FlowModel    json:{"uid":"6"}
+admin-系统管理员    2013-03-14 17:17:45.111    0:0:0:0:0:0:0:1    add    com.lxq.platform.flowManage.pojo.FlowModel    json:{"phaseNo":"1020","phaseName":"阶段三","role":{"uid":1},"nextPhaseNo":"6666","flowCatalog":{"uid":"1"}}

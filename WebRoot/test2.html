@@ -1,0 +1,99 @@
+<html>
+<head>
+  <title>Debug Console</title>
+
+<link rel="stylesheet" type="text/css"
+	href="./resources/extjs/resources/css/ext-all.css" />
+<link rel="stylesheet" type="text/css"
+	href="./resources/extjs/examples/shared/examples.css" />
+<link rel="stylesheet" type="text/css"
+	href="./resources/css/ext-patch.css" />
+
+<script type="text/javascript"
+	src="./resources/extjs/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="./resources/extjs/states.js"></script>
+<script type="text/javascript" src="./resources/extjs/ext-all-debug.js"></script>
+<script type="text/javascript"
+	src="./resources/extjs/examples/shared/examples.js"></script>
+<script type="text/javascript"
+	src="./resources/extjs/src/locale/ext-lang-zh_CN.js"></script>
+
+<script type="text/javascript"
+	src="./resources/extjs/Ext.ux.form.LovCombo.js"></script>
+
+
+ <script type="text/javascript">
+     
+Ext.onReady(function(){
+    Ext.BLANK_IMAGE_URL = './resources/extjs/resources/images/default/tree/s.gif';
+ Ext.QuickTips.init();//注意，提示初始化必须要有
+
+     var cm = new Ext.grid.ColumnModel([
+        {header:'编号',dataIndex:'id',width:35},
+        {header:'名称',dataIndex:'name',width:80},
+        {header:'描述',dataIndex:'descn',width:120}
+    ]);
+
+    var data = [
+        ['1','name1','descn1'],
+        ['2','name2','descn2'],
+        ['3','name3','descn3'],
+        ['4','name4','descn4'],
+        ['5','name5','descn5']
+    ];
+
+    var store = new Ext.data.Store({
+        proxy: new Ext.data.MemoryProxy(data),
+        reader: new Ext.data.ArrayReader({}, [
+            {name: 'id'},
+            {name: 'name'},
+            {name: 'descn'}
+        ])
+    });
+    store.load();
+    var grid = new Ext.grid.EditorGridPanel({
+       autoHeight: true,
+          renderTo: 'grid',
+          store: store,
+          cm: cm,
+          viewConfig: {
+            forceFit: true
+         }
+
+});
+   grid.on('mouseover',function(e){//添加mouseover事件
+  var index = grid.getView().findRowIndex(e.getTarget());//根据mouse所在的target可以取到列的位置
+  if(index!==false){//当取到了正确的列时，（因为如果传入的target列没有取到的时候会返回false）
+   var record = store.getAt(index);//把这列的record取出来
+   
+   var str = Ext.encode(record.data.name);//组装一个字符串，这个需要你自己来完成，这儿我把他序列化
+   var rowEl = Ext.get(e.getTarget());//把target转换成Ext.Element对象
+   new Ext.ToolTip({
+         target: e.getTarget(),
+         width:200,
+         html: str,
+         trackMouse:true
+     });
+  }
+   });
+   
+    var win = new Ext.Window({
+     id:'window',
+        layout:'fit',
+        width:500,
+        height:270,
+        closeAction:'hide',
+        items: [grid]
+
+    });
+    win.show();
+
+});
+        </script>
+    </head>
+    <body>
+            <div id="grid"></div>
+            <a id='track-tip' href="">closetip</a>
+    
+    </body>
+</html> 

@@ -1,0 +1,3 @@
+admin-系统管理员    2013-03-16 23:41:17.666    0:0:0:0:0:0:0:1    add    com.lxq.platform.systemManage.pojo.Menu    json:{"orderNo":1140,"text":"共性目标","url":"/userManage/corporateGoal.jsp","showTree":2,"parentMenu":{"id":3}}
+admin-系统管理员    2013-03-16 23:41:30.054    0:0:0:0:0:0:0:1    add    com.lxq.platform.systemManage.pojo.Menu    json:{"menuId":"15","roleUid":1}
+admin-系统管理员    2013-03-16 23:41:56.091    0:0:0:0:0:0:0:1    update    com.lxq.platform.systemManage.pojo.Menu    json:{->15,->1140,->共性目标,->/userManage/corporateGoal.jsp,->2,parentMenu.id:3->3,}

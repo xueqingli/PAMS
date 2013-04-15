@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lxq.platform.systemManage.pojo.Notice" table="basic_notice" catalog="pamsdb">
+
+        <id name="uid" type="java.lang.Integer">
+            <generator class="native" />
+        </id>
+        
+        <property name="title" type="java.lang.String" length="100"/>
+        <property name="filePath" type="java.lang.String" length="100"/>
+        <property name="startDate" type="java.lang.String" length="10"/>
+        <property name="endDate" type="java.lang.String" length="10"/>
+        
+    </class>
+</hibernate-mapping>
+
